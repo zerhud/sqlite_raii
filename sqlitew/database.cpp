@@ -1,6 +1,6 @@
 /*************************************************************************
  * Copyright © 2018 Hudyaev Alexy <hudyaev.alexy@gmail.com>
- * This file is part of http_parser.
+ * This file is part of sqlitew.
  * Distributed under the MIT License.
  * See accompanying file LICENSE (at the root of this repository)
  *************************************************************************/
