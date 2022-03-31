@@ -4,6 +4,7 @@
 #include <boost/test/unit_test.hpp>
 #include "sqlitew/stmt.hpp"
 
+BOOST_AUTO_TEST_SUITE(sqlitew)
 BOOST_AUTO_TEST_SUITE(common)
 
 BOOST_AUTO_TEST_CASE(create)
@@ -64,3 +65,4 @@ BOOST_AUTO_TEST_CASE(set_get)
 }
 
 BOOST_AUTO_TEST_SUITE_END() // common
+BOOST_AUTO_TEST_SUITE_END() // sqlitew
