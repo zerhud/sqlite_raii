@@ -2,7 +2,7 @@
 
 /*************************************************************************
  * Copyright © 2018 Hudyaev Alexy <hudyaev.alexy@gmail.com>
- * This file is part of sqlitew.
+ * This file is part of sqlite_raii.
  * Distributed under the MIT License.
  * See accompanying file LICENSE (at the root of this repository)
  *************************************************************************/
@@ -10,7 +10,7 @@
 #include <string>
 #include "sqlite3.h"
 
-namespace sqlitew {
+namespace sqlite_raii {
 
 class database final {
 	mutable ::sqlite3* db = nullptr;
@@ -24,4 +24,4 @@ public:
 	void exec(std::string q) ;
 };
 
-} // namespace sqlitew
+} // namespace sqlite_raii

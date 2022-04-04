@@ -1,6 +1,6 @@
 /*************************************************************************
  * Copyright © 2018 Hudyaev Alexy <hudyaev.alexy@gmail.com>
- * This file is part of sqlitew.
+ * This file is part of sqlite_raii.
  * Distributed under the MIT License.
  * See accompanying file LICENSE (at the root of this repository)
  *************************************************************************/
@@ -9,28 +9,28 @@
 
 using namespace std::literals;
 
-void sqlitew::error::throw_if(const database& db)
+void sqlite_raii::error::throw_if(const database& db)
 {
 	int code = db.error_code();
 	if(code!=0) throw error(db);
 }
 
-void sqlitew::error::throw_if(int code)
+void sqlite_raii::error::throw_if(int code)
 {
 	if(code != SQLITE_OK) throw error(code);
 }
 
-sqlitew::error::error(int code)
+sqlite_raii::error::error(int code)
     : desc(std::to_string(code) + ": "s + sqlite3_errstr(code))
 {
 }
 
-sqlitew::error::error(const database& db)
+sqlite_raii::error::error(const database& db)
     : desc(sqlite3_errstr(db.error_code()))
 {
 }
 
-const char* sqlitew::error::what() const noexcept
+const char* sqlite_raii::error::what() const noexcept
 {
 	return desc.c_str();
 }

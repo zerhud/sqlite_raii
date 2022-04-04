@@ -2,7 +2,7 @@
 
 /*************************************************************************
  * Copyright © 2018 Hudyaev Alexy <hudyaev.alexy@gmail.com>
- * This file is part of sqlitew.
+ * This file is part of sqlite_raii.
  * Distributed under the MIT License.
  * See accompanying file LICENSE (at the root of this repository)
  *************************************************************************/
@@ -11,7 +11,7 @@
 #include <optional>
 #include "database.hpp"
 
-namespace sqlitew {
+namespace sqlite_raii {
 
 class stmt final {
 	::sqlite3_stmt* rst;
@@ -56,4 +56,4 @@ public:
 	}
 };
 
-} // namespace sqlitew
+} // namespace sqlite_raii

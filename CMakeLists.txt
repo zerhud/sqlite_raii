@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(sqlitew
+project(sqlite_raii
 	LANGUAGES C CXX
 	DESCRIPTION "sqlite api raii"
 	VERSION 0.0.0.0
