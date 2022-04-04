@@ -22,6 +22,7 @@ public:
 
 	::sqlite3_stmt* raw() ;
 	void exec() ;
+	std::string sql() const ;
 };
 
 class query final {
@@ -52,6 +53,8 @@ public:
 		    return (const char*)sqlite3_column_text(st->raw(), ind);
 		else if constexpr( std::is_same_v<T, std::int64_t>)
 		    return sqlite3_column_int64(st->raw(), ind);
+		else if constexpr( std::is_same_v<T, double>)
+		    return sqlite3_column_double(st->raw(), ind);
 		else return std::nullopt;
 	}
 };

@@ -32,6 +32,11 @@ void sqlite_raii::stmt::exec()
 	q.step();
 }
 
+std::string sqlite_raii::stmt::sql() const
+{
+	return sqlite3_sql(rst);
+}
+
 bool sqlite_raii::query::is_null(std::size_t ind) const
 {
 	return sqlite3_column_bytes(st->raw(), ind) == 0;
