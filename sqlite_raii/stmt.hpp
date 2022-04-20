@@ -7,7 +7,7 @@
  * See accompanying file LICENSE (at the root of this repository)
  *************************************************************************/
 
-#include <vector>
+#include <list>
 #include <optional>
 #include "database.hpp"
 
@@ -27,7 +27,7 @@ public:
 
 class query final {
 	stmt* st;
-	std::vector<std::string> texts;
+	std::list<std::string> texts;
 
 	bool is_null(std::size_t ind) const ;
 public:
